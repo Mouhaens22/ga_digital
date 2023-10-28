@@ -1,0 +1,62 @@
+Table Professeur :
+
+    Professeur_ID (clé primaire)
+    Nom
+    Prénom
+    Email
+    Téléphone
+    Autres attributs pertinents
+
+Table Module :
+
+    Module_ID (clé primaire)
+    Nom du module
+    Description
+    Filière_ID (clé étrangère vers Filière)
+    Autres attributs pertinents
+
+Table Filière :
+
+    Filière_ID (clé primaire)
+    Nom de la filière
+    Description
+    Autres attributs pertinents
+
+Table Étudiant :
+
+    Étudiant_ID (clé primaire)
+    Nom
+    Prénom
+    Date de naissance
+    Email
+    Filière_ID (clé étrangère vers Filière)
+    Autres attributs pertinents
+
+Table Séance de Cours :
+
+    SeanceCours_ID (clé primaire)
+    Module_ID (clé étrangère vers Module)
+    Date de début
+    Date de fin
+    Jour de la semaine
+    Heure de début
+    Heure de fin
+    Salle de cours
+    Autres attributs pertinents
+
+Table Absence :
+
+    Absence_ID (clé primaire)
+    Étudiant_ID (clé étrangère vers Étudiant)
+    SeanceCours_ID (clé étrangère vers SeanceCours)
+    Motif de l'absence
+    Commentaire (facultatif)
+    Statut de l'absence (par exemple, approuvé, en attente, rejeté)
+    Autres attributs pertinents
+
+Table Enseigne (Relation Professeur - Module) :
+
+    Enseigne_ID (clé primaire)
+    Professeur_ID (clé étrangère vers Professeur)
+    Module_ID (clé étrangère vers Module)
+    Autres attributs pertinents
